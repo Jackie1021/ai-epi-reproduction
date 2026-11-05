@@ -1,0 +1,33 @@
+# ============================================================================
+# Frontier extension (22 October 2026): GPT-6.1 Sol and GPT-6 Astra through the official OpenAI API, reasoning at the
+# default level (medium). Same prompts, parser, Stan fits and scoring as the main study; results only in runs/frontier/.
+# GPT-6.1 Sol: designs (i)-(v) and the external-information experiment (3 samples, as the six experiment models).
+# GPT-6 Astra: designs (i)-(iii) (run with --arms), then (iv)-(v) on 23 October (--arms r0_ctx,r0_imp, 48 calls).  Prices: USD per 1M tokens (third-party summaries).
+# ============================================================================
+extends: config.yaml
+run_name: frontier
+models:
+  - id: gpt61sol
+    label: GPT-6.1 Sol
+    provider: openai
+    model: gpt-6.1-sol
+    params: {max_output_tokens: 32000, reasoning: {effort: medium}}
+    price_in: 2.0
+    price_out: 10.0
+    rpm: 6
+    concurrency: 2
+    family: openai
+  - id: gpt6astra
+    label: GPT-6 Astra
+    provider: openai
+    model: gpt-6-astra
+    params: {max_output_tokens: 32000, reasoning: {effort: medium}}
+    price_in: 10.0
+    price_out: 50.0
+    rpm: 6
+    concurrency: 2
+    family: openai
+context_experiment:
+  arms: [r0_semi, r0_ctx, r0_imponly, r0_imp, r0_placebo]
+  models: [gpt61sol]
+  n_samples: 3

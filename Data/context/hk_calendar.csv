@@ -1,0 +1,121 @@
+start,end,event,event_semi,type,source
+2015-02-19,2015-02-21,General holidays: the first to third day of Lunar New Year,Public holidays (Lunar New Year),general_holiday,EDB General Holidays 2014/15
+2015-04-03,2015-04-07,"General holidays: Good Friday, the day following Good Friday, the day following Ching Ming Festival and the day following Easter Monday",Public holidays (Easter and Ching Ming Festival),general_holiday,EDB General Holidays 2014/15
+2015-05-01,2015-05-01,General holiday: Labour Day,Public holiday (Labour Day),general_holiday,EDB General Holidays 2014/15
+2015-05-25,2015-05-25,General holiday: the Birthday of the Buddha,Public holiday (Buddha's Birthday),general_holiday,EDB General Holidays 2014/15
+2015-06-20,2015-06-20,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB General Holidays 2014/15
+2015-07-01,2015-07-01,General holiday: HKSAR Establishment Day,Public holiday,general_holiday,EDB General Holidays 2014/15
+2015-09-01,2015-09-01,Schools reopen: first day of the 2015/16 school year,Schools reopen after the summer vacation,school_term,EDB school year 2015/16 (first weekday of September)
+2015-09-03,2015-09-03,General holiday: the 70th anniversary day of the victory of the Chinese people's war of resistance against Japanese aggression (one-off),Public holiday (one-off anniversary),general_holiday,EDB General Holidays 2015/16
+2015-09-28,2015-09-28,General holiday: the day following the Chinese Mid-Autumn Festival,Public holiday (day after Mid-Autumn Festival),general_holiday,EDB General Holidays 2015/16
+2015-10-01,2015-10-01,General holiday: National Day,Public holiday (National Day),general_holiday,EDB General Holidays 2015/16
+2015-10-21,2015-10-21,General holiday: Chung Yeung Festival,Public holiday (Chung Yeung Festival),general_holiday,EDB General Holidays 2015/16
+2015-12-21,2016-01-03,School Christmas and New Year holidays,School Christmas and New Year holidays (schools closed),school_holiday,EDB example school calendar 2015/16 (Chinese version)
+2015-12-25,2015-12-26,General holidays: Christmas Day and the first weekday after Christmas,Public holidays (Christmas),general_holiday,EDB General Holidays 2015/16
+2016-01-01,2016-01-01,General holiday: the first day of January,Public holiday (New Year's Day),general_holiday,EDB General Holidays 2015/16
+2016-02-05,2016-02-14,School Lunar New Year holidays,School Lunar New Year holidays (schools closed),school_holiday,EDB example school calendar 2015/16 (Chinese version)
+2016-02-08,2016-02-10,General holidays: the first to third day of Lunar New Year,Public holidays (Lunar New Year),general_holiday,EDB General Holidays 2015/16
+2016-03-25,2016-03-28,General holidays: Good Friday to Easter Monday,Public holidays (Easter),general_holiday,EDB General Holidays 2015/16
+2016-03-25,2016-04-04,School Easter holidays,School Easter holidays (schools closed),school_holiday,EDB example school calendar 2015/16 (Chinese version)
+2016-04-04,2016-04-04,General holiday: Ching Ming Festival,Public holiday (Ching Ming Festival),general_holiday,EDB General Holidays 2015/16
+2016-05-02,2016-05-02,General holiday: the day following Labour Day,Public holiday (Labour Day),general_holiday,EDB General Holidays 2015/16
+2016-05-14,2016-05-14,General holiday: the Birthday of the Buddha,Public holiday (Buddha's Birthday),general_holiday,EDB General Holidays 2015/16
+2016-06-09,2016-06-09,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB General Holidays 2015/16
+2016-07-01,2016-07-01,General holiday: HKSAR Establishment Day,Public holiday,general_holiday,EDB General Holidays 2015/16
+2016-07-14,2016-08-31,School summer vacation (primary and secondary schools),School summer vacation (primary and secondary schools closed),school_holiday,EDB example school calendar 2015/16 (Chinese version)
+2016-09-01,2016-09-01,Schools reopen: first day of the 2016/17 school year,Schools reopen after the summer vacation,school_term,EDB school year 2016/17 (first weekday of September)
+2016-09-16,2016-09-16,General holiday: the day following the Chinese Mid-Autumn Festival,Public holiday (day after Mid-Autumn Festival),general_holiday,EDB General Holidays 2016/17
+2016-10-01,2016-10-01,General holiday: National Day,Public holiday (National Day),general_holiday,EDB General Holidays 2016/17
+2016-10-10,2016-10-10,General holiday: the day following Chung Yeung Festival,Public holiday (Chung Yeung Festival),general_holiday,EDB General Holidays 2016/17
+2016-12-21,2017-01-02,School Christmas and New Year holidays,School Christmas and New Year holidays (schools closed),school_holiday,EDB example school calendar 2016/17 (Chinese version)
+2016-12-26,2016-12-27,General holidays: the first and second weekdays after Christmas Day,Public holidays (Christmas),general_holiday,EDB General Holidays 2016/17
+2017-01-02,2017-01-02,General holiday: the day following the first day of January,Public holiday (New Year's Day),general_holiday,EDB General Holidays 2016/17
+2017-01-27,2017-02-04,School Lunar New Year holidays,School Lunar New Year holidays (schools closed),school_holiday,EDB example school calendar 2016/17 (Chinese version)
+2017-01-28,2017-01-31,General holidays: Lunar New Year's Day and the third and fourth day of Lunar New Year,Public holidays (Lunar New Year),general_holiday,EDB General Holidays 2016/17
+2017-04-04,2017-04-04,General holiday: Ching Ming Festival,Public holiday (Ching Ming Festival),general_holiday,EDB General Holidays 2016/17
+2017-04-14,2017-04-17,General holidays: Good Friday to Easter Monday,Public holidays (Easter),general_holiday,EDB General Holidays 2016/17
+2017-04-14,2017-04-24,School Easter holidays,School Easter holidays (schools closed),school_holiday,EDB example school calendar 2016/17 (Chinese version)
+2017-05-01,2017-05-01,General holiday: Labour Day,Public holiday (Labour Day),general_holiday,EDB General Holidays 2016/17
+2017-05-03,2017-05-03,General holiday: the Birthday of the Buddha,Public holiday (Buddha's Birthday),general_holiday,EDB General Holidays 2016/17
+2017-05-30,2017-05-30,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB General Holidays 2016/17
+2017-07-01,2017-07-01,General holiday: HKSAR Establishment Day,Public holiday,general_holiday,EDB General Holidays 2016/17
+2017-07-14,2017-08-31,School summer vacation (primary and secondary schools),School summer vacation (primary and secondary schools closed),school_holiday,EDB example school calendar 2016/17 (Chinese version)
+2017-09-01,2017-09-01,Schools reopen: first day of the 2017/18 school year,Schools reopen after the summer vacation,school_term,EDB school year 2017/18 (first weekday of September)
+2017-10-02,2017-10-02,General holiday: the day following National Day,Public holiday (National Day),general_holiday,EDB General Holidays 2017/18
+2017-10-05,2017-10-05,General holiday: the day following the Chinese Mid-Autumn Festival,Public holiday (day after Mid-Autumn Festival),general_holiday,EDB General Holidays 2017/18
+2017-10-28,2017-10-28,General holiday: Chung Yeung Festival,Public holiday (Chung Yeung Festival),general_holiday,EDB General Holidays 2017/18
+2017-12-20,2018-01-01,School Christmas and New Year holidays,School Christmas and New Year holidays (schools closed),school_holiday,EDB example school calendar 2017/18
+2017-12-25,2017-12-26,General holidays: Christmas Day and the first weekday after Christmas,Public holidays (Christmas),general_holiday,EDB General Holidays 2017/18
+2018-01-01,2018-01-01,General holiday: the first day of January,Public holiday (New Year's Day),general_holiday,EDB General Holidays 2017/18
+2018-02-14,2018-02-22,School Lunar New Year holidays,School Lunar New Year holidays (schools closed),school_holiday,EDB example school calendar 2017/18
+2018-02-16,2018-02-19,"General holidays: Lunar New Year's Day, the second and the fourth day of Lunar New Year",Public holidays (Lunar New Year),general_holiday,EDB General Holidays 2017/18
+2018-03-30,2018-04-02,General holidays: Good Friday to Easter Monday,Public holidays (Easter),general_holiday,EDB General Holidays 2017/18
+2018-03-30,2018-04-09,School Easter holidays,School Easter holidays (schools closed),school_holiday,EDB example school calendar 2017/18
+2018-04-05,2018-04-05,General holiday: Ching Ming Festival,Public holiday (Ching Ming Festival),general_holiday,EDB General Holidays 2017/18
+2018-05-01,2018-05-01,General holiday: Labour Day,Public holiday (Labour Day),general_holiday,EDB General Holidays 2017/18
+2018-05-22,2018-05-22,General holiday: the Birthday of the Buddha,Public holiday (Buddha's Birthday),general_holiday,EDB General Holidays 2017/18
+2018-06-18,2018-06-18,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB General Holidays 2017/18
+2018-07-02,2018-07-02,General holiday: the day following HKSAR Establishment Day,Public holiday,general_holiday,EDB General Holidays 2017/18
+2018-07-13,2018-08-31,School summer vacation (primary and secondary schools),School summer vacation (primary and secondary schools closed),school_holiday,EDB example school calendar 2017/18
+2018-09-03,2018-09-03,Schools reopen: first day of the 2018/19 school year,Schools reopen after the summer vacation,school_term,EDB school year 2018/19 (first weekday of September)
+2018-09-25,2018-09-25,General holiday: the day following the Chinese Mid-Autumn Festival,Public holiday (day after Mid-Autumn Festival),general_holiday,EDB General Holidays 2018/19
+2018-10-01,2018-10-01,General holiday: National Day,Public holiday (National Day),general_holiday,EDB General Holidays 2018/19
+2018-10-17,2018-10-17,General holiday: Chung Yeung Festival,Public holiday (Chung Yeung Festival),general_holiday,EDB General Holidays 2018/19
+2018-12-21,2019-01-01,School Christmas and New Year holidays,School Christmas and New Year holidays (schools closed),school_holiday,EDB example school calendar 2018/19
+2018-12-25,2018-12-26,General holidays: Christmas Day and the first weekday after Christmas,Public holidays (Christmas),general_holiday,EDB General Holidays 2018/19
+2019-01-01,2019-01-01,General holiday: the first day of January,Public holiday (New Year's Day),general_holiday,EDB General Holidays 2018/19
+2019-02-01,2019-02-11,School Lunar New Year holidays,School Lunar New Year holidays (schools closed),school_holiday,EDB example school calendar 2018/19
+2019-02-05,2019-02-07,General holidays: the first to third day of Lunar New Year,Public holidays (Lunar New Year),general_holiday,EDB General Holidays 2018/19
+2019-04-05,2019-04-05,General holiday: Ching Ming Festival,Public holiday (Ching Ming Festival),general_holiday,EDB General Holidays 2018/19
+2019-04-19,2019-04-22,General holidays: Good Friday to Easter Monday,Public holidays (Easter),general_holiday,EDB General Holidays 2018/19
+2019-04-19,2019-04-29,School Easter holidays,School Easter holidays (schools closed),school_holiday,EDB example school calendar 2018/19
+2019-05-01,2019-05-01,General holiday: Labour Day,Public holiday (Labour Day),general_holiday,EDB General Holidays 2018/19
+2019-05-13,2019-05-13,General holiday: the day following the Birthday of the Buddha,Public holiday (Buddha's Birthday),general_holiday,EDB General Holidays 2018/19
+2019-06-07,2019-06-07,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB General Holidays 2018/19
+2019-07-01,2019-07-01,General holiday: HKSAR Establishment Day,Public holiday,general_holiday,EDB General Holidays 2018/19
+2019-07-15,2019-08-31,School summer vacation (primary and secondary schools),School summer vacation (primary and secondary schools closed),school_holiday,EDB example school calendar 2018/19
+2019-09-02,2019-09-02,Schools reopen: first day of the 2019/20 school year,Schools reopen after the summer vacation,school_term,EDB school year 2019/20 (first weekday of September)
+2019-09-14,2019-09-14,General holiday: the day following the Chinese Mid-Autumn Festival,Public holiday (day after Mid-Autumn Festival),general_holiday,EDB General Holidays 2019/20
+2019-10-01,2019-10-01,General holiday: National Day,Public holiday (National Day),general_holiday,EDB General Holidays 2019/20
+2019-10-07,2019-10-07,General holiday: Chung Yeung Festival,Public holiday (Chung Yeung Festival),general_holiday,EDB General Holidays 2019/20
+2019-12-20,2020-01-01,School Christmas and New Year holidays,School Christmas and New Year holidays (schools closed),school_holiday,EDB example school calendar 2019/20
+2019-12-25,2019-12-26,General holidays: Christmas Day and the first weekday after Christmas,Public holidays (Christmas),general_holiday,EDB General Holidays 2019/20
+2020-01-01,2020-01-01,General holiday: the first day of January,Public holiday (New Year's Day),general_holiday,EDB General Holidays 2019/20
+2020-01-22,2020-02-01,School Lunar New Year holidays,School Lunar New Year holidays (schools closed),school_holiday,EDB example school calendar 2019/20
+2020-01-25,2020-01-28,"General holidays: Lunar New Year's Day, the third and the fourth day of Lunar New Year",Public holidays (Lunar New Year),general_holiday,EDB General Holidays 2019/20
+2024-06-10,2024-06-10,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB General Holidays 2023/24
+2024-07-01,2024-07-01,General holiday: HKSAR Establishment Day,Public holiday,general_holiday,EDB General Holidays 2023/24
+2024-07-11,2024-08-31,School summer vacation (primary and secondary schools),School summer vacation (primary and secondary schools closed),school_holiday,EDB example school calendar 2023/24
+2024-09-02,2024-09-02,Schools reopen: first day of the 2024/25 school year,Schools reopen after the summer vacation,school_term,EDB example school calendar 2024/25
+2024-09-18,2024-09-18,General holiday: the day following the Chinese Mid-Autumn Festival,Public holiday (day after Mid-Autumn Festival),general_holiday,EDB example school calendar 2024/25
+2024-10-01,2024-10-01,General holiday: National Day,Public holiday (National Day),general_holiday,EDB example school calendar 2024/25
+2024-10-11,2024-10-11,General holiday: Chung Yeung Festival,Public holiday (Chung Yeung Festival),general_holiday,EDB example school calendar 2024/25
+2024-12-23,2025-01-01,School Christmas and New Year holidays,School Christmas and New Year holidays (schools closed),school_holiday,EDB example school calendar 2024/25
+2024-12-25,2024-12-26,General holidays: Christmas Day and the first weekday after Christmas,Public holidays (Christmas),general_holiday,EDB example school calendar 2024/25
+2025-01-01,2025-01-01,General holiday: the first day of January,Public holiday (New Year's Day),general_holiday,EDB example school calendar 2024/25
+2025-01-24,2025-02-04,School Lunar New Year holidays,School Lunar New Year holidays (schools closed),school_holiday,EDB example school calendar 2024/25
+2025-01-29,2025-01-31,General holidays: the first to third day of Lunar New Year,Public holidays (Lunar New Year),general_holiday,EDB example school calendar 2024/25
+2025-04-04,2025-04-04,General holiday: Ching Ming Festival,Public holiday (Ching Ming Festival),general_holiday,EDB example school calendar 2024/25
+2025-04-18,2025-04-21,General holidays: Good Friday to Easter Monday,Public holidays (Easter),general_holiday,EDB example school calendar 2024/25
+2025-04-18,2025-04-26,School Easter holidays,School Easter holidays (schools closed),school_holiday,EDB example school calendar 2024/25
+2025-05-01,2025-05-01,General holiday: Labour Day,Public holiday (Labour Day),general_holiday,EDB example school calendar 2024/25
+2025-05-05,2025-05-05,General holiday: the Birthday of the Buddha,Public holiday (Buddha's Birthday),general_holiday,EDB example school calendar 2024/25
+2025-05-31,2025-05-31,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB example school calendar 2024/25
+2025-07-01,2025-07-01,General holiday: HKSAR Establishment Day,Public holiday,general_holiday,EDB example school calendar 2024/25
+2025-07-11,2025-08-30,School summer vacation (primary and secondary schools),School summer vacation (primary and secondary schools closed),school_holiday,EDB example school calendar 2024/25
+2025-09-01,2025-09-01,Schools reopen: first day of the 2025/26 school year,Schools reopen after the summer vacation,school_term,EDB example school calendar 2025/26
+2025-10-01,2025-10-01,General holiday: National Day,Public holiday (National Day),general_holiday,EDB General Holidays 2025/26
+2025-10-07,2025-10-07,General holiday: the day following the Chinese Mid-Autumn Festival,Public holiday (day after Mid-Autumn Festival),general_holiday,EDB General Holidays 2025/26
+2025-10-29,2025-10-29,General holiday: Chung Yeung Festival,Public holiday (Chung Yeung Festival),general_holiday,EDB General Holidays 2025/26
+2025-12-24,2026-01-03,School Christmas and New Year holidays,School Christmas and New Year holidays (schools closed),school_holiday,EDB example school calendar 2025/26
+2025-12-25,2025-12-26,General holidays: Christmas Day and the first weekday after Christmas,Public holidays (Christmas),general_holiday,EDB General Holidays 2025/26
+2026-01-01,2026-01-01,General holiday: the first day of January,Public holiday (New Year's Day),general_holiday,EDB General Holidays 2025/26
+2026-02-12,2026-02-21,School Lunar New Year holidays,School Lunar New Year holidays (schools closed),school_holiday,EDB example school calendar 2025/26
+2026-02-17,2026-02-19,General holidays: the first to third day of Lunar New Year,Public holidays (Lunar New Year),general_holiday,EDB General Holidays 2025/26
+2026-04-03,2026-04-07,"General holidays: Good Friday, the day following Good Friday, the day following Ching Ming Festival and the day following Easter Monday",Public holidays (Easter and Ching Ming Festival),general_holiday,EDB General Holidays 2025/26
+2026-04-03,2026-04-11,School Easter holidays,School Easter holidays (schools closed),school_holiday,EDB example school calendar 2025/26
+2026-05-01,2026-05-01,General holiday: Labour Day,Public holiday (Labour Day),general_holiday,EDB General Holidays 2025/26
+2026-05-25,2026-05-25,General holiday: the day following the Birthday of the Buddha,Public holiday (Buddha's Birthday),general_holiday,EDB General Holidays 2025/26
+2026-06-19,2026-06-19,General holiday: Tuen Ng Festival,Public holiday (Dragon Boat Festival),general_holiday,EDB General Holidays 2025/26
+2026-07-01,2026-07-01,General holiday: HKSAR Establishment Day,Public holiday,general_holiday,EDB General Holidays 2025/26
+2026-07-10,2026-08-31,School summer vacation (primary and secondary schools),School summer vacation (primary and secondary schools closed),school_holiday,EDB example school calendar 2025/26

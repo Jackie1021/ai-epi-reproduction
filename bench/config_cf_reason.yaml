@@ -1,0 +1,64 @@
+# ============================================================================
+# Amendment 15, extension: the mechanism test with reasoning switched on (same prompts as config_cf.yaml)
+# Reasoning versions of the main-study models; Ling 3.0 Flash Sante excluded (free endpoint withdrawn), Gemma 4 has
+# no reasoning mode. Gemini requests are sent only after the Gemini requests of config_cf.yaml are answered.
+# Results only in runs/cf_reason/; the main results of the test are those of runs/cf/ (main-study settings).
+#   nohup bash run_cf_reason.sh 20 > runs/cf_reason_loop.log 2>&1 &
+# ============================================================================
+extends: config_cf.yaml
+run_name: cf_reason
+models:
+  - id: nemo3ur
+    label: Nemotron 3 Ultra (reasoning high)
+    provider: openrouter
+    model: "nvidia/nemotron-3-ultra-550b-a55b:free"
+    params: {max_tokens: 32000, extra_body: {reasoning: {effort: high}}}
+    rpm: 4
+  - id: ling3sr_unused
+    label: Ling 3.0 Flash Sante (reasoning high)
+    provider: openrouter
+    model: "inclusionai/ling-3.0-flash-sante:free"
+    params: {max_tokens: 32000, extra_body: {reasoning: {effort: high}}}
+    rpm: 4
+  - id: qwenr
+    label: Qwen3.8 27B (thinking on)
+    provider: modelscope
+    model: Qwen/Qwen3.8-27B
+    params: {max_tokens: 32000, extra_body: {enable_thinking: true}}
+    rpm: 20
+  - id: glm52r
+    label: GLM 5.2 (thinking on)
+    provider: modelscope
+    model: ZhipuAI/GLM-5.2
+    params: {max_tokens: 32000, extra_body: {enable_thinking: true}}
+    rpm: 20
+  - id: dsv41fr
+    label: DeepSeek V4.1 Flash (thinking on)
+    provider: modelscope
+    model: deepseek-ai/DeepSeek-V4.1-Flash
+    params: {max_tokens: 32000, extra_body: {enable_thinking: true}}
+    rpm: 20
+  - id: gem25fr
+    label: Gemini 2.5 Flash (reasoning high)
+    provider: gemini
+    model: gemini-2.5-flash
+    params: {max_tokens: 32000, reasoning_effort: high}
+    rpm: 5
+  - id: gem38fr
+    label: Gemini 3.8 Flash (reasoning high)
+    provider: gemini
+    model: gemini-3.8-flash
+    params: {max_tokens: 32000, reasoning_effort: high}
+    rpm: 5
+  - id: gptoss20r
+    label: GPT-OSS 20B (reasoning high)
+    provider: nvidia
+    model: openai/gpt-oss-20b
+    params: {max_tokens: 32000, reasoning_effort: high}
+    rpm: 20
+  - id: kimik3r
+    label: Kimi K3 (thinking on)
+    provider: nvidia
+    model: moonshotai/kimi-k3
+    params: {max_tokens: 32000, extra_body: {chat_template_kwargs: {thinking: true}}}
+    rpm: 15

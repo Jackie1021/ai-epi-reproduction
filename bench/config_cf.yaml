@@ -1,0 +1,20 @@
+# ============================================================================
+# Mechanism test (counterfactual prompts): do the LLM judgements follow transmission mechanisms?
+# Same epidemic state and prompt as design (iii)/(iv)/(v); one input changed between the two arms of a pair:
+#   cf_term / cf_holiday        school term vs school holidays over the forecast window (expected: lower
+#                               multipliers for influenza, RSV and HFMD under holidays; little change for COVID-19)
+#   cf_h3_low / cf_h3_high      A(H3N2) importation set low (1%, relative pressure 0.2) or high and rising (8->20%, 2.5); others real
+#                               (expected: higher multipliers for A(H3N2) only)
+#   cf_news_none / cf_news_variant  news of a new immune-escape SARS-CoV-2 variant
+#                               (expected: higher multipliers for SARS-CoV-2 only)
+# 12 of the 24 main-study origins (every second one), 11 models, one request each; results only in runs/cf/
+#   bash run_cf.sh            (loop until every request has an answer)
+# ============================================================================
+extends: config.yaml
+run_name: cf
+arms: [cf_news_none, cf_news_variant, cf_term, cf_holiday, cf_h3_low, cf_h3_high]
+context_experiment: null
+n_samples: 1
+request_order:
+  arms: [cf_news_none, cf_news_variant, cf_term, cf_holiday, cf_h3_low, cf_h3_high]
+  origin_seed: 20261013

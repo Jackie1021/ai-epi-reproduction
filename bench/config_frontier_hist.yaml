@@ -1,0 +1,15 @@
+# Frontier extension: the 2015-2019 retrospective evaluation for GPT-6.1 Sol, designs (i)-(iv) as config_hist.yaml.
+# Results only in runs/frontier_hist/.
+extends: config_hist.yaml
+run_name: frontier_hist
+models:
+  - id: gpt61sol
+    label: GPT-6.1 Sol
+    provider: openai
+    model: gpt-6.1-sol
+    params: {max_output_tokens: 32000, reasoning: {effort: medium}}
+    price_in: 2.0
+    price_out: 10.0
+    rpm: 6
+    concurrency: 2
+    family: openai

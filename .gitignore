@@ -1,0 +1,31 @@
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+.venv/
+.Rprofile
+.Renviron
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+
+# Data supplied locally and generated results
+*.xlsx
+*.xls
+*.rds
+*.RDS
+*.log
+Data/chp_raw/
+Data/context/raw/
+Data/context/importation/importation_weekly.csv
+Data/context/importation/importation_by_source.csv
+bench/cache/
+bench/runs/
+output/
+results/
+reproduced/
+manuscript/

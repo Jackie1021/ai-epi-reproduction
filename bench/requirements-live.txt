@@ -1,0 +1,4 @@
+-r requirements.txt
+anthropic==1.8.0
+openai==3.19.2
+brotli==1.2.0

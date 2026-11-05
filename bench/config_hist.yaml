@@ -1,0 +1,24 @@
+# ============================================================================
+# 历史期重复研究（修正案 8，bench/protocol_context_experiment.md）
+# 2015-01-31 至 2019-12-28 的 65 个起点，5 个病原体（2020 年前没有 COVID），设计 (i)-(iv)；
+# 其余设置（模型、提示词、分位数、评分）全部继承 config.yaml
+#   bash llm.sh run --config config_hist.yaml        结果在 runs/hist/
+#   Stan 拟合：bash ../run_export_hist.sh 4           结果在 output/origins_hist/
+# ============================================================================
+extends: config.yaml
+run_name: hist
+observed_from: 2014-01-04          # 数据文件第一周；每个起点只用它之前的数据
+origins_dir: output/origins_hist
+origins_smoke_dir: output/origins_hist_smoke
+strains: [B, H3, H1, RSV, HFMD]
+arms: [r0_semi, r0_ctx, direct_blind, direct_named]
+context_experiment: null           # 输入压力（设计 v-vii）在 2023 年前没有同样口径的数据，不跑
+prospective_from: null             # 历史期没有前瞻期之分
+data:
+  importation_csv: null
+# 请求顺序：主研究的请求先发（run_until_done.sh 每轮先跑主研究）；历史期按设计 (iii), (iv), (i), (ii)，
+# 设计内起点按固定随机顺序（种子 20260927），所以没收完时已收的是起点的随机子集，而不是最早的几年
+request_order:
+  arms: [r0_semi, r0_ctx, direct_blind, direct_named]
+  origin_seed: 20260927
+phase_min_origins: 52              # 修正案 8：一个模型的某设计至少 52 / 65 个起点有评分才进入分析

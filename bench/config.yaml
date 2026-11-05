@@ -1,0 +1,143 @@
+# ============================================================================
+# LLM × 机制模型 预测实验配置
+# 改完直接跑：python -m llm_bench all        （在 bench/ 目录下）
+# ============================================================================
+
+project_dir: .  # relative to the checkout root
+
+data:
+  ili_csv: Data/HK_weekly_6pathogens.csv   # Data/build_hk_weekly.py 生成（CHP 数据，日期 = 周末周六）
+  oag_xlsx: Data/OAG_HongKong_2011-2026Mar.xlsx   # 2011-01 至 2026-03（同一口径，见文件内 README）
+  calendar_csv: Data/context/hk_calendar.csv   # 校历/公众假期（EDB 校历示例 + 公众假期表），只给 r0_ctx 组
+  weather_csv: Data/context/hk_weather_weekly.csv  # 天文台每周天气 + 1991-2020 常年值（build_weather.py 生成），给 r0_ctx / r0_imp
+  importation_csv: Data/context/importation/importation_weekly.csv  # 流感输入压力（importation/build_importation.py 生成），只给 r0_imp
+origins_dir: output/origins                    # export_origins.R 的输出
+origins_smoke_dir: output/origins_smoke
+observed_from: 2023-01-07        # 主研究（2024-07 至 2026-04 的 24 个起点）只用这天以后的观测，与冻结的设计一致；
+                                 # 数据文件从 2014-01-04 开始，更早的年份只给历史期研究（修正案 8）
+
+strains: [B, H3, H1, COVID, RSV, HFMD]
+series_descriptions:            # 给 LLM 的序列说明（请核对措辞）
+  B: influenza B
+  H3: influenza A(H3N2)
+  H1: influenza A(H1N1)pdm09
+  COVID: SARS-CoV-2 (COVID-19)
+  RSV: respiratory syncytial virus
+  HFMD: hand, foot and mouth disease
+series_note: >-
+  Each indicator is a weekly surveillance measure proportional to infection
+  activity of that pathogen. Units differ between pathogens and are not
+  comparable across series.
+
+setting:
+  named: Hong Kong SAR, China
+  semi: a densely populated subtropical city in East Asia
+  population_millions: 7.5
+
+horizons: 4
+score_quantiles: [0.05, 0.25, 0.5, 0.75, 0.95]   # 5 个分位数（50% 和 90% 区间），让小模型的回答放得进免费档的输出上限
+history_weeks_direct: 156       # 直接预测组最多给多少周历史
+history_weeks_r0: 12            # R0 组每个病原体给多少周明细
+
+arms:                           # 实验组（注释掉的不跑）
+  - direct_blind                # LLM 直接预测病例：去掉日期/地点/病原体名，数值重缩放
+  - direct_named                # LLM 直接预测病例：真实日期、香港、病原体名
+  - r0_semi                     # LLM 给 R0 乘数 → 机制模型前推：保留病原体名和季节，去掉年份和城市
+  - r0_ctx                      # 同 r0_semi，另给校历/公众假期和天气；与 r0_semi 之差 = 背景信息的价值
+  - r0_imp                      # 同 r0_ctx，再给流感输入压力（航空 + 陆路/海路）；与 r0_ctx 之差 = 输入压力的价值
+# - r0_named                    # 同上但信息全开（数据泄露风险最大，需要时再打开）
+
+n_samples: 1                    # 每个 (起点, 模型, 组) 独立调用次数（免费档先用 1；付费后可改 3）
+
+# 外部信息的析因实验（设计和分析计划：bench/protocol_context_experiment.md，2026-09-25 定稿后再开跑）
+# 2x2 析因（校历和天气 x 输入压力）+ 安慰剂；6 个模型（免费额度能在几天内跑完的），每个请求调用 3 次（R0 乘数等权混合）。
+# 主结果（图 05-08）仍只用第 1 次调用（sample 0），8 个模型口径一致；这里的 3 次调用只用于图 09
+context_experiment:
+  arms: [r0_semi, r0_ctx, r0_imponly, r0_imp, r0_placebo]
+  models: [gemma31, gemma26, gptoss20, qwen, dsv41f, kimik3]   # DeepSeek、Kimi 于 2026-09-26 加入（protocol 修订 5）
+  n_samples: 3
+max_parse_retries: 10            # 输出解析失败时最多重试几次（修正案 13：2 -> 5；2026-10-12：5 -> 10，给 Ling 输出被截断的请求更多机会；失败的回答会被缓存）
+sim_draws: 1000                 # R0 组最多用多少个后验样本前推
+seed: 20260924
+reference_model: stan_const     # 相对 WIS 的分母（Stan 固定 R0 外推）
+prospective_from: 2025-11-09      # 前瞻期：起点在此之后的预测目标，在设定模型和 prompt 时还没有数据
+                                 # （旧数据只到 2025-11-08）；开发期和前瞻期分别报告（protocol 修订 1）
+
+budget_usd: 100                 # 有价格的模型累计花费超过这个数就停止派发新调用
+concurrency_per_model: 1        # 每个模型同时发几个请求（不同模型之间并行）
+round_minutes: 60               # 每轮最多发新请求 60 分钟，之后进入下一轮（慢模型不拖住额度刚恢复的模型）
+api_retries: 6                  # 过载 / 限流时等待重试的次数（30 秒起，每次翻倍，最长 10 分钟）
+
+models:
+  # id = 结果里的名字；label = 图里的名字；provider = 调用方式；model = 各家的模型 ID
+  # rpm = 每分钟最多发几个请求（按免费档限额主动控速）；concurrency = 同时发几个；enabled: false = 暂不参与
+  # family = 同一开发者的模型共用一个颜色（后面的成员换线型和标记）
+  # 思考（推理）设置：能关的都关掉，只能调强度的用 low；Gemini 用默认。每个模型全程只用一个服务商
+  # 当天额度用完的模型会在本轮自动停下，下一轮（run_until_done.sh）接着跑
+  # ---- Google AI Studio 免费档
+  - {id: gem38f,  label: Gemini 3.8 Flash, provider: gemini, model: gemini-3.8-flash, rpm: 5, family: google}
+  - {id: gem25f,  label: Gemini 2.5 Flash, provider: gemini, model: gemini-2.5-flash, rpm: 5, family: google}
+  - {id: gemma31, label: Gemma 4 31B,      provider: gemini, model: gemma-4-31b-it,   rpm: 5, concurrency: 2, family: google}
+  - {id: gemma26, label: Gemma 4 26B A4B,  provider: gemini, model: gemma-4-26b-a4b-it, rpm: 5, concurrency: 2, family: google}
+  # ---- 阿里魔搭 ModelScope API-Inference（免费，需绑定阿里云并实名；每天约 2000 次，这几个模型共用）
+  # Qwen3.8 27B：Groq 免费档每天只有约 40 个请求，2026-09-26 起整体改走魔搭（全部请求在魔搭重跑，
+  # Groq 上的回答归档在 runs/main/responses_archive_groq/）
+  - id: qwen
+    label: Qwen3.8 27B
+    provider: modelscope
+    model: Qwen/Qwen3.8-27B
+    params: {max_tokens: 3000, extra_body: {enable_thinking: false}}
+    rpm: 20
+    concurrency: 3
+  # GLM 5.2：OpenRouter 的免费版已取消，改走魔搭
+  - id: glm52
+    label: GLM 5.2
+    provider: modelscope
+    model: ZhipuAI/GLM-5.2
+    params: {max_tokens: 3000, extra_body: {enable_thinking: false}}
+    rpm: 20
+    concurrency: 3
+  - id: dsv41f
+    label: DeepSeek V4.1 Flash
+    provider: modelscope
+    model: deepseek-ai/DeepSeek-V4.1-Flash
+    params: {max_tokens: 3000, extra_body: {enable_thinking: false}}
+    rpm: 20
+    concurrency: 3
+  # ---- NVIDIA NIM（build.nvidia.com 开发者免费档，约 40 次/分钟，这里的模型共用）；单个请求常要排队几分钟，并发多开
+  # GPT-OSS 20B：Groq 免费档每天只有约 40 个请求，2026-09-26 起整体改走 NIM（Groq 上的回答已归档）
+  - id: gptoss20
+    label: GPT-OSS 20B
+    provider: nvidia
+    model: openai/gpt-oss-20b
+    params: {max_tokens: 4000, reasoning_effort: low}
+    rpm: 20
+    concurrency: 12
+  - id: kimik3
+    label: Kimi K3
+    provider: nvidia
+    model: moonshotai/kimi-k3
+    params: {max_tokens: 3000, extra_body: {chat_template_kwargs: {thinking: false}}}
+    rpm: 15
+    concurrency: 6
+  # ---- OpenRouter 免费模型（:free）：每个账号每分钟 20 个、每天 50 个请求，这里的模型共用；
+  # 第一个 key 当天额度用完后自动换用 OPENROUTER_API_KEY_2
+  - id: nemo3u
+    label: Nemotron 3 Ultra
+    provider: openrouter
+    model: "nvidia/nemotron-3-ultra-550b-a55b:free"
+    params: {extra_body: {reasoning: {effort: low}}}
+    rpm: 4
+  - id: ling3s
+    label: Ling 3.0 Flash Sante
+    provider: openrouter
+    model: "inclusionai/ling-3.0-flash-sante:free"
+    params: {extra_body: {reasoning: {effort: low}}}
+    rpm: 4
+  # 暂不参与（付费或需要时把 enabled 改成 true）
+  - {id: gem35f,   label: Gemini 3.5 Flash,      provider: gemini,   model: gemini-3.5-flash,      rpm: 5, enabled: false}
+  - {id: gem35fl,  label: Gemini 3.5 Flash-Lite, provider: gemini,   model: gemini-3.5-flash-lite, rpm: 5, enabled: false}
+  - {id: gem31fl,  label: Gemini 3.1 Flash-Lite, provider: gemini,   model: gemini-3.1-flash-lite, rpm: 5, enabled: false}
+  - {id: gpt,      label: GPT-5.4 nano,          provider: openai,   model: gpt-5.4-nano,          enabled: false}
+  - {id: grok,     label: Grok,                  provider: xai,      model: FILL_ME,               enabled: false}
+  - {id: deepseek, label: DeepSeek,              provider: deepseek, model: deepseek-chat,         enabled: false}

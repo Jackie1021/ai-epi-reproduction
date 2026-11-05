@@ -1,0 +1,107 @@
+# Combined analysis of the main study (11 LLMs, runs/main/) and the frontier extension (GPT-6.1 Sol, GPT-6 Astra,
+# runs/frontier/), for the figures and tables that show all 13 LLMs. No API calls: runs/main_frontier/ is built by
+# combine_frontier.py from the saved forecasts of the two runs. Pooled estimates in the text stay those of the
+# 11 main-study models (runs/main/).
+extends: config.yaml
+run_name: main_frontier
+models:
+- {id: gem38f, label: Gemini 3.8 Flash, provider: gemini, model: gemini-3.8-flash, rpm: 5, family: google}
+- {id: gem25f, label: Gemini 2.5 Flash, provider: gemini, model: gemini-2.5-flash, rpm: 5, family: google}
+- {id: gemma31, label: Gemma 4 31B, provider: gemini, model: gemma-4-31b-it, rpm: 5, concurrency: 2, family: google}
+- {id: gemma26, label: Gemma 4 26B A4B, provider: gemini, model: gemma-4-26b-a4b-it, rpm: 5, concurrency: 2, family: google}
+- id: qwen
+  label: Qwen3.8 27B
+  provider: modelscope
+  model: Qwen/Qwen3.8-27B
+  params:
+    max_tokens: 3000
+    extra_body: {enable_thinking: false}
+  rpm: 20
+  concurrency: 3
+- id: glm52
+  label: GLM 5.2
+  provider: modelscope
+  model: ZhipuAI/GLM-5.2
+  params:
+    max_tokens: 3000
+    extra_body: {enable_thinking: false}
+  rpm: 20
+  concurrency: 3
+- id: dsv41f
+  label: DeepSeek V4.1 Flash
+  provider: modelscope
+  model: deepseek-ai/DeepSeek-V4.1-Flash
+  params:
+    max_tokens: 3000
+    extra_body: {enable_thinking: false}
+  rpm: 20
+  concurrency: 3
+- id: gptoss20
+  label: GPT-OSS 20B
+  provider: nvidia
+  model: openai/gpt-oss-20b
+  params: {max_tokens: 4000, reasoning_effort: low}
+  rpm: 20
+  concurrency: 12
+  family: openai
+- id: kimik3
+  label: Kimi K3
+  provider: nvidia
+  model: moonshotai/kimi-k3
+  params:
+    max_tokens: 3000
+    extra_body:
+      chat_template_kwargs: {thinking: false}
+  rpm: 15
+  concurrency: 6
+- id: nemo3u
+  label: Nemotron 3 Ultra
+  provider: openrouter
+  model: nvidia/nemotron-3-ultra-550b-a55b:free
+  params:
+    extra_body:
+      reasoning: {effort: low}
+  rpm: 4
+- id: ling3s
+  label: Ling 3.0 Flash Sante
+  provider: openrouter
+  model: inclusionai/ling-3.0-flash-sante:free
+  params:
+    extra_body:
+      reasoning: {effort: low}
+  rpm: 4
+- {id: gem35f, label: Gemini 3.5 Flash, provider: gemini, model: gemini-3.5-flash, rpm: 5, enabled: false}
+- {id: gem35fl, label: Gemini 3.5 Flash-Lite, provider: gemini, model: gemini-3.5-flash-lite, rpm: 5, enabled: false}
+- {id: gem31fl, label: Gemini 3.1 Flash-Lite, provider: gemini, model: gemini-3.1-flash-lite, rpm: 5, enabled: false}
+- {id: gpt, label: GPT-5.4 nano, provider: openai, model: gpt-5.4-nano, enabled: false}
+- {id: grok, label: Grok, provider: xai, model: FILL_ME, enabled: false}
+- {id: deepseek, label: DeepSeek, provider: deepseek, model: deepseek-chat, enabled: false}
+- id: gpt61sol
+  label: GPT-6.1 Sol
+  provider: openai
+  model: gpt-6.1-sol
+  params:
+    max_output_tokens: 32000
+    reasoning: {effort: medium}
+  price_in: 2.0
+  price_out: 10.0
+  rpm: 6
+  concurrency: 2
+  family: openai
+- id: gpt6astra
+  label: GPT-6 Astra
+  provider: openai
+  model: gpt-6-astra
+  params:
+    max_output_tokens: 32000
+    reasoning: {effort: medium}
+  price_in: 10.0
+  price_out: 50.0
+  rpm: 6
+  concurrency: 2
+  family: openai
+context_experiment:
+  arms: [r0_semi, r0_ctx, r0_imponly, r0_imp, r0_placebo]
+  models: [gemma31, gemma26, gptoss20, qwen, dsv41f, kimik3, gpt61sol]
+  n_samples: 3
+extension_models: [gpt61sol, gpt6astra]

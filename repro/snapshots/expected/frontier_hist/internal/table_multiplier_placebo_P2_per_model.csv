@@ -1,0 +1,3 @@
+by,level,model,n_origins,n_cells,ratio,lo95,hi95,p_better,run,scale
+all,all,gpt61sol,65,325,0.9949292305734577,0.9769391354359436,1.0133281387581188,0.6995,frontier_hist,natural
+all,all,gpt61sol,65,325,1.0047706853809186,0.9930018839878437,1.0172998970232956,0.20625,frontier_hist,log

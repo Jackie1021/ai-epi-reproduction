@@ -1,0 +1,37 @@
+run,scenario,analysis,scale,level,n_origins,ratio,lo95,hi95,p_better
+hist,main analysis,(iii) vs mechanistic,natural,all,65,1.0160610699284613,0.9662753448230795,1.0700478573193113,0.236
+hist,main analysis,(iii) vs mechanistic,natural,declining,57,1.051049101563874,0.9874130851433099,1.1200964701620046,0.0525
+hist,main analysis,(iii) vs mechanistic,natural,growing,52,1.0026553862843601,0.9341791120552508,1.086546039878022,0.42975
+hist,main analysis,(iii) vs mechanistic,natural,stable,45,1.0450164898035468,0.9756875561708424,1.106264498370908,0.11225
+hist,main analysis,(iii) vs mechanistic,log,all,65,1.0213817245349237,0.9834206188506193,1.0612198925743113,0.12925
+hist,main analysis,(iii) vs mechanistic,log,declining,57,1.0404541861342846,0.973400997846123,1.1192166119993499,0.12525
+hist,main analysis,(iii) vs mechanistic,log,growing,52,1.0127562099978855,0.9668466354174651,1.064176917011883,0.28475
+hist,main analysis,(iii) vs mechanistic,log,stable,45,1.0315234407957972,0.969052985387563,1.084088720976202,0.20075
+hist,main analysis,(iii) vs direct (i),natural,all,52,0.8246457698797113,0.6365281116350799,1.041679252027522,0.93275
+hist,main analysis,(iii) vs direct (i),log,all,52,0.659326608276296,0.35275215146008326,0.9823289239719691,0.98675
+hist,main analysis,coverage 90% r0_semi,natural,all,65,0.8892307692307693,,,
+hist,main analysis,coverage 90% stan_const,natural,all,65,0.8823076923076923,,,
+hist,S1 without these origins,(iii) vs mechanistic,natural,all,60,1.0141093036458135,0.9633412233811429,1.07345816972782,0.27325
+hist,S1 without these origins,(iii) vs mechanistic,natural,declining,53,1.0466808041846607,0.9821956163459866,1.117723481773333,0.06525
+hist,S1 without these origins,(iii) vs mechanistic,natural,growing,48,1.0018281765398285,0.9313343134098606,1.0858122629203744,0.4415
+hist,S1 without these origins,(iii) vs mechanistic,natural,stable,41,1.0427987140093904,0.9727503413080195,1.1053533626523355,0.139
+hist,S1 without these origins,(iii) vs mechanistic,log,all,60,1.0190595286062867,0.9800361720086044,1.0632859786156377,0.168
+hist,S1 without these origins,(iii) vs mechanistic,log,declining,53,1.0382782508452406,0.9699437524322007,1.125213872894278,0.143
+hist,S1 without these origins,(iii) vs mechanistic,log,growing,48,1.0078090025683983,0.9617183786035524,1.0607409991232104,0.37325
+hist,S1 without these origins,(iii) vs mechanistic,log,stable,41,1.0283609709511554,0.9652782722207649,1.0850612182289574,0.2555
+hist,S1 without these origins,(iii) vs direct (i),natural,all,49,0.8246290858044871,0.639928324726794,1.0404816435918962,0.9365
+hist,S1 without these origins,(iii) vs direct (i),log,all,49,0.6518578350995932,0.34228019509510377,0.9778755160198407,0.98875
+hist,S1 without these origins,coverage 90% r0_semi,natural,all,60,0.89075,,,
+hist,S1 without these origins,coverage 90% stan_const,natural,all,60,0.8825,,,
+hist,S2 longest-chain fits,(iii) vs mechanistic,natural,all,65,1.0160534575002818,0.9663351729756775,1.0699747119884537,0.23525
+hist,S2 longest-chain fits,(iii) vs mechanistic,natural,declining,57,1.0515949795942252,0.9878671952528691,1.1209943394039548,0.051
+hist,S2 longest-chain fits,(iii) vs mechanistic,natural,growing,52,1.0026506230257708,0.9338400245945822,1.0867843865324205,0.43075
+hist,S2 longest-chain fits,(iii) vs mechanistic,natural,stable,45,1.0446289150823003,0.9754423406916283,1.105652740399775,0.11425
+hist,S2 longest-chain fits,(iii) vs mechanistic,log,all,65,1.021461788930563,0.9832852334930923,1.0614493146802984,0.12775
+hist,S2 longest-chain fits,(iii) vs mechanistic,log,declining,57,1.0403376216318834,0.9731652485264042,1.118944369626979,0.126
+hist,S2 longest-chain fits,(iii) vs mechanistic,log,growing,52,1.0135045145252035,0.967435051870377,1.0658981862634611,0.273
+hist,S2 longest-chain fits,(iii) vs mechanistic,log,stable,45,1.0311339126170658,0.9685118778264942,1.0832730480440844,0.20625
+hist,S2 longest-chain fits,(iii) vs direct (i),natural,all,52,0.8245579744043889,0.6364344585517757,1.0418264610632815,0.933
+hist,S2 longest-chain fits,(iii) vs direct (i),log,all,52,0.6592170006941601,0.35268007250503114,0.9826948429498837,0.9865
+hist,S2 longest-chain fits,coverage 90% r0_semi,natural,all,65,0.8893846153846153,,,
+hist,S2 longest-chain fits,coverage 90% stan_const,natural,all,65,0.8815384615384615,,,

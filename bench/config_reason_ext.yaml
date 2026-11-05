@@ -1,0 +1,57 @@
+# ============================================================================
+# 修正案 11：推理测试的预先登记扩展（bench/protocol_context_experiment.md）
+# 7 个主研究模型的推理版本：同样的模型版本、同样的提示词（与主研究逐字相同），只改请求参数
+#   OpenRouter：Nemotron、Ling 推理强度 low -> high
+#   ModelScope：Qwen、GLM、DeepSeek thinking off -> on
+#   Google：Gemini 2.5 / 3.8 Flash 默认 -> reasoning_effort high
+# 设计 (iii)，主研究 24 个起点，每个请求 1 次；结果只在 runs/reason_ext/，不进入主研究的任何估计
+# 主研究优先：run_reason_ext.sh 只在某服务商的主研究请求全部有回答后，才发这个服务商的推理请求
+# ============================================================================
+extends: config.yaml
+run_name: reason_ext
+arms: [r0_semi]
+context_experiment: null
+n_samples: 1
+models:
+  - id: nemo3ur
+    label: Nemotron 3 Ultra (reasoning high)
+    provider: openrouter
+    model: "nvidia/nemotron-3-ultra-550b-a55b:free"
+    params: {max_tokens: 32000, extra_body: {reasoning: {effort: high}}}
+    rpm: 4
+  - id: ling3sr
+    label: Ling 3.0 Flash Sante (reasoning high)
+    provider: openrouter
+    model: "inclusionai/ling-3.0-flash-sante:free"
+    params: {max_tokens: 32000, extra_body: {reasoning: {effort: high}}}
+    rpm: 4
+  - id: qwenr
+    label: Qwen3.8 27B (thinking on)
+    provider: modelscope
+    model: Qwen/Qwen3.8-27B
+    params: {max_tokens: 32000, extra_body: {enable_thinking: true}}
+    rpm: 20
+  - id: glm52r
+    label: GLM 5.2 (thinking on)
+    provider: modelscope
+    model: ZhipuAI/GLM-5.2
+    params: {max_tokens: 32000, extra_body: {enable_thinking: true}}
+    rpm: 20
+  - id: dsv41fr
+    label: DeepSeek V4.1 Flash (thinking on)
+    provider: modelscope
+    model: deepseek-ai/DeepSeek-V4.1-Flash
+    params: {max_tokens: 32000, extra_body: {enable_thinking: true}}
+    rpm: 20
+  - id: gem25fr
+    label: Gemini 2.5 Flash (reasoning high)
+    provider: gemini
+    model: gemini-2.5-flash
+    params: {max_tokens: 32000, reasoning_effort: high}
+    rpm: 5
+  - id: gem38fr
+    label: Gemini 3.8 Flash (reasoning high)
+    provider: gemini
+    model: gemini-3.8-flash
+    params: {max_tokens: 32000, reasoning_effort: high}
+    rpm: 5

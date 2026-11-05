@@ -1,0 +1,474 @@
+{
+  "Data/HK_weekly_6pathogens.csv": {
+    "selection": "public surveillance or public calendar/weather",
+    "sha256": "cd32dfb724bcf6239ceacd74c714234d614ba1f62291827362539e67773945d6",
+    "source": "Data/HK_weekly_6pathogens.csv",
+    "source_sha256": "cd32dfb724bcf6239ceacd74c714234d614ba1f62291827362539e67773945d6"
+  },
+  "Data/README_HK_weekly.md": {
+    "selection": "public surveillance or public calendar/weather",
+    "sha256": "d785646efb98e283a8f5ca288a18cb34bc513b60b4cff8dfe020422d751aeda8",
+    "source": "Data/README_HK_weekly.md",
+    "source_sha256": "d785646efb98e283a8f5ca288a18cb34bc513b60b4cff8dfe020422d751aeda8"
+  },
+  "Data/context/hk_calendar.csv": {
+    "selection": "public surveillance or public calendar/weather",
+    "sha256": "9260f6e5939faf0d611028373d9f71b46715ded6b10892c8d930a42321fa7ed1",
+    "source": "Data/context/hk_calendar.csv",
+    "source_sha256": "9260f6e5939faf0d611028373d9f71b46715ded6b10892c8d930a42321fa7ed1"
+  },
+  "Data/context/hk_weather_weekly.csv": {
+    "selection": "public surveillance or public calendar/weather",
+    "sha256": "4e878efb3e9b5f87e1235c2c92a234cf993dacdffc0aea127ac87bfea996e40e",
+    "source": "Data/context/hk_weather_weekly.csv",
+    "source_sha256": "4e878efb3e9b5f87e1235c2c92a234cf993dacdffc0aea127ac87bfea996e40e"
+  },
+  "repro/snapshots/archived_stan/stan_historical_sampling_diagnostics.csv": {
+    "selection": "original numeric file",
+    "sha256": "485e382ca4aa6441b34755b409299233c0cf32119cc3ee41bcba5c27ef5e833e",
+    "source": "results/tables/stan_historical_sampling_diagnostics.csv",
+    "source_sha256": "485e382ca4aa6441b34755b409299233c0cf32119cc3ee41bcba5c27ef5e833e"
+  },
+  "repro/snapshots/archived_stan/stan_parameters_prior_posterior.csv": {
+    "selection": "original numeric file",
+    "sha256": "ce57854df3bced249775e73ddb07a9b45b07b5ea3a1e5a169ccb4399456419ee",
+    "source": "results/tables/stan_parameters_prior_posterior.csv",
+    "source_sha256": "ce57854df3bced249775e73ddb07a9b45b07b5ea3a1e5a169ccb4399456419ee"
+  },
+  "repro/snapshots/archived_stan/stan_sampling_diagnostics.csv": {
+    "selection": "original numeric file",
+    "sha256": "c11322845c06af3532dbd212e6e3e02ce471223921ffa25512d765ca7df9d323",
+    "source": "results/tables/stan_sampling_diagnostics.csv",
+    "source_sha256": "c11322845c06af3532dbd212e6e3e02ce471223921ffa25512d765ca7df9d323"
+  },
+  "repro/snapshots/earlier_vintages/hist/table_convergence_sensitivity.csv": {
+    "selection": "Historical table retained for provenance; uses earlier forecast vintage than this replay",
+    "sha256": "aef0536fe04416650a4c91041caf19d23f12472de110aeada1dce16d99e000b9",
+    "source": "bench/runs/hist/table_convergence_sensitivity.csv",
+    "source_sha256": "aef0536fe04416650a4c91041caf19d23f12472de110aeada1dce16d99e000b9"
+  },
+  "repro/snapshots/earlier_vintages/main/table_convergence_sensitivity.csv": {
+    "selection": "Historical table retained for provenance; uses earlier forecast vintage than this replay",
+    "sha256": "c483dcf454d761dab648859ba64d9045c938baa380b3b1555565227be89efe7b",
+    "source": "bench/runs/main/table_convergence_sensitivity.csv",
+    "source_sha256": "c483dcf454d761dab648859ba64d9045c938baa380b3b1555565227be89efe7b"
+  },
+  "repro/snapshots/earlier_vintages/reason/table_a10_reasoning.csv": {
+    "selection": "Historical table retained for provenance; uses earlier forecast vintage than this replay",
+    "sha256": "6d04d308b0bbfe33eef4ad1f41d4a4a0ac64acf9e6ffc28d8434a40e051c8b80",
+    "source": "bench/runs/reason/table_a10_reasoning.csv",
+    "source_sha256": "6d04d308b0bbfe33eef4ad1f41d4a4a0ac64acf9e6ffc28d8434a40e051c8b80"
+  },
+  "repro/snapshots/earlier_vintages/reason/table_a10_reasoning_beta.csv": {
+    "selection": "Historical table retained for provenance; uses earlier forecast vintage than this replay",
+    "sha256": "90b34c4aea560ddf53ae7da41e53ee43bf6201f1bac7aa9771777be8d2f33443",
+    "source": "bench/runs/reason/table_a10_reasoning_beta.csv",
+    "source_sha256": "90b34c4aea560ddf53ae7da41e53ee43bf6201f1bac7aa9771777be8d2f33443"
+  },
+  "repro/snapshots/earlier_vintages/reason_ext/table_a11_hypotheses.csv": {
+    "selection": "Historical table retained for provenance; uses earlier forecast vintage than this replay",
+    "sha256": "575775e48aea2b95151dfcc2e39ed3dffd3b98578225d7d44d9262a6029bf95b",
+    "source": "bench/runs/reason_ext/table_a11_hypotheses.csv",
+    "source_sha256": "575775e48aea2b95151dfcc2e39ed3dffd3b98578225d7d44d9262a6029bf95b"
+  },
+  "repro/snapshots/expected/cf/table_mechanism.csv": {
+    "selection": "original numeric file",
+    "sha256": "05097016ac8b7f4715aabc19d740eaf1713ada0a8fd33858d413b2a0081d86dc",
+    "source": "bench/runs/cf/table_mechanism.csv",
+    "source_sha256": "05097016ac8b7f4715aabc19d740eaf1713ada0a8fd33858d413b2a0081d86dc"
+  },
+  "repro/snapshots/expected/cf_reason/table_mechanism.csv": {
+    "selection": "original numeric file",
+    "sha256": "11e2bb154b93d258de44389bc0dd4f5b822e9aabd519ed3d7dab9b8d53954dfd",
+    "source": "bench/runs/cf_reason/table_mechanism.csv",
+    "source_sha256": "11e2bb154b93d258de44389bc0dd4f5b822e9aabd519ed3d7dab9b8d53954dfd"
+  },
+  "repro/snapshots/expected/frontier/internal/table_multiplier_placebo.csv": {
+    "selection": "original numeric file",
+    "sha256": "7f399a950f243af4d1ecb59ad113e5248f4b99385afa2957bbefd198ebd8b10a",
+    "source": "bench/runs/frontier/internal/table_multiplier_placebo.csv",
+    "source_sha256": "7f399a950f243af4d1ecb59ad113e5248f4b99385afa2957bbefd198ebd8b10a"
+  },
+  "repro/snapshots/expected/frontier/internal/table_multiplier_placebo_P2_per_model.csv": {
+    "selection": "original numeric file",
+    "sha256": "c22f588cf57c47e9f0f787d6da57135cbaa31616488be4509dd54ca9ba1cbf22",
+    "source": "bench/runs/frontier/internal/table_multiplier_placebo_P2_per_model.csv",
+    "source_sha256": "c22f588cf57c47e9f0f787d6da57135cbaa31616488be4509dd54ca9ba1cbf22"
+  },
+  "repro/snapshots/expected/frontier/table_context_experiment_all.csv": {
+    "selection": "all-stratum published effects only; no origin-level importation input or strata",
+    "sha256": "6164b60ddf7d369e7cfcc8140075ee80808a0cc2de9541403392ae79c560b053",
+    "source": "bench/runs/frontier/table_context_experiment.csv",
+    "source_sha256": "5e9545baa43131a8f525b6130d84cbcd4854e05bd0ba9cf8ae737b34a86dff3e"
+  },
+  "repro/snapshots/expected/frontier/table_coverage.csv": {
+    "selection": "original numeric file",
+    "sha256": "9ef2bef3dfc4c9c4bd66f1617ff8a57dfd2dc6690f6200a447ed4dde66c4380f",
+    "source": "bench/runs/frontier/table_coverage.csv",
+    "source_sha256": "9ef2bef3dfc4c9c4bd66f1617ff8a57dfd2dc6690f6200a447ed4dde66c4380f"
+  },
+  "repro/snapshots/expected/frontier/table_relative_wis.csv": {
+    "selection": "original numeric file",
+    "sha256": "aec966da6fc18e63eb844af7127f0db7ebfd1405fa5658317426bf13bf999454",
+    "source": "bench/runs/frontier/table_relative_wis.csv",
+    "source_sha256": "aec966da6fc18e63eb844af7127f0db7ebfd1405fa5658317426bf13bf999454"
+  },
+  "repro/snapshots/expected/frontier/table_relative_wis_log.csv": {
+    "selection": "original numeric file",
+    "sha256": "ecaf593086920cc3908a1299f6d5587d8f5e96221597645fb7566ae587512138",
+    "source": "bench/runs/frontier/table_relative_wis_log.csv",
+    "source_sha256": "ecaf593086920cc3908a1299f6d5587d8f5e96221597645fb7566ae587512138"
+  },
+  "repro/snapshots/expected/frontier_cf/table_mechanism.csv": {
+    "selection": "original numeric file",
+    "sha256": "7369772864f4ad9967c1518c66aa0fb42c785e691a9021fac5ae99f835da1b43",
+    "source": "bench/runs/frontier_cf/table_mechanism.csv",
+    "source_sha256": "7369772864f4ad9967c1518c66aa0fb42c785e691a9021fac5ae99f835da1b43"
+  },
+  "repro/snapshots/expected/frontier_hist/internal/table_multiplier_placebo.csv": {
+    "selection": "original numeric file",
+    "sha256": "ebf6c66783a3e5b06b6850f57051679181ad47078a9935d3e5858ebae7034fe1",
+    "source": "bench/runs/frontier_hist/internal/table_multiplier_placebo.csv",
+    "source_sha256": "ebf6c66783a3e5b06b6850f57051679181ad47078a9935d3e5858ebae7034fe1"
+  },
+  "repro/snapshots/expected/frontier_hist/internal/table_multiplier_placebo_P2_per_model.csv": {
+    "selection": "original numeric file",
+    "sha256": "042df6c875a2a125a55cea4227691f86d5deee0f7269d5ae462661a877f0e53a",
+    "source": "bench/runs/frontier_hist/internal/table_multiplier_placebo_P2_per_model.csv",
+    "source_sha256": "042df6c875a2a125a55cea4227691f86d5deee0f7269d5ae462661a877f0e53a"
+  },
+  "repro/snapshots/expected/hist/internal/table_multiplier_placebo.csv": {
+    "selection": "original numeric file",
+    "sha256": "e713c72fe76e8fc38b71831e8fb364a86314724956fed48246dc91d15cb02a7f",
+    "source": "bench/runs/hist/internal/table_multiplier_placebo.csv",
+    "source_sha256": "e713c72fe76e8fc38b71831e8fb364a86314724956fed48246dc91d15cb02a7f"
+  },
+  "repro/snapshots/expected/hist/internal/table_multiplier_placebo_P2_per_model.csv": {
+    "selection": "original numeric file",
+    "sha256": "fa16e448168aa7f5c6808d021525f163a4dd9757486920dc6e572505d932ddf9",
+    "source": "bench/runs/hist/internal/table_multiplier_placebo_P2_per_model.csv",
+    "source_sha256": "fa16e448168aa7f5c6808d021525f163a4dd9757486920dc6e572505d932ddf9"
+  },
+  "repro/snapshots/expected/hist/table_a8.csv": {
+    "selection": "original numeric file",
+    "sha256": "d13df19405c234b9b8181e1123564d222fabfba9e6c7201ee90ffbf859a2b89b",
+    "source": "bench/runs/hist/table_a8.csv",
+    "source_sha256": "d13df19405c234b9b8181e1123564d222fabfba9e6c7201ee90ffbf859a2b89b"
+  },
+  "repro/snapshots/expected/hist/table_coverage.csv": {
+    "selection": "original numeric file",
+    "sha256": "bcc48875642db5910004e073b73404cfb3151218675e0216a4ce56cb8620e055",
+    "source": "bench/runs/hist/table_coverage.csv",
+    "source_sha256": "bcc48875642db5910004e073b73404cfb3151218675e0216a4ce56cb8620e055"
+  },
+  "repro/snapshots/expected/hist/table_relative_wis.csv": {
+    "selection": "original numeric file",
+    "sha256": "2060a36f1812d1e85e71fee772028168f9bc17418df153bef4a8b8c6accf7203",
+    "source": "bench/runs/hist/table_relative_wis.csv",
+    "source_sha256": "2060a36f1812d1e85e71fee772028168f9bc17418df153bef4a8b8c6accf7203"
+  },
+  "repro/snapshots/expected/hist/table_relative_wis_log.csv": {
+    "selection": "original numeric file",
+    "sha256": "07d81024aab33496fb5ed8bc563ae1a236a1ea25d96545362aef29cbc8c9291d",
+    "source": "bench/runs/hist/table_relative_wis_log.csv",
+    "source_sha256": "07d81024aab33496fb5ed8bc563ae1a236a1ea25d96545362aef29cbc8c9291d"
+  },
+  "repro/snapshots/expected/main/internal/table_multiplier_placebo.csv": {
+    "selection": "original numeric file",
+    "sha256": "83a4b5e4626b768c92655b98a21b534b028cfe9453efc8623ee48de5b77df447",
+    "source": "bench/runs/main/internal/table_multiplier_placebo.csv",
+    "source_sha256": "83a4b5e4626b768c92655b98a21b534b028cfe9453efc8623ee48de5b77df447"
+  },
+  "repro/snapshots/expected/main/internal/table_multiplier_placebo_P2_per_model.csv": {
+    "selection": "original numeric file",
+    "sha256": "cbc477bcff22cd6c54dd670ac83b287c241465eedb7b1a345a952f5ae8f5b029",
+    "source": "bench/runs/main/internal/table_multiplier_placebo_P2_per_model.csv",
+    "source_sha256": "cbc477bcff22cd6c54dd670ac83b287c241465eedb7b1a345a952f5ae8f5b029"
+  },
+  "repro/snapshots/expected/main/table_context_experiment_all.csv": {
+    "selection": "all-stratum published effects only; no origin-level importation input or strata",
+    "sha256": "14c3210a5fc44d889d12bb6e960807edcd3aaf33a5fa0c93fd04280101f4fb15",
+    "source": "bench/runs/main/table_context_experiment.csv",
+    "source_sha256": "08af882d9376d7d29a233836debea943c97ab4d4fa4b69b450a6a08f9eab1817"
+  },
+  "repro/snapshots/expected/main/table_coverage.csv": {
+    "selection": "original numeric file",
+    "sha256": "53e9805db95d2ff402ba0325975140ea5e09197dd94e21c673b3b4f6f02ee92b",
+    "source": "bench/runs/main/table_coverage.csv",
+    "source_sha256": "53e9805db95d2ff402ba0325975140ea5e09197dd94e21c673b3b4f6f02ee92b"
+  },
+  "repro/snapshots/expected/main/table_relative_wis.csv": {
+    "selection": "original numeric file",
+    "sha256": "5c4fdd5009856e3274d763a0e16e0520001980c4442c328832839ad195ebfc60",
+    "source": "bench/runs/main/table_relative_wis.csv",
+    "source_sha256": "5c4fdd5009856e3274d763a0e16e0520001980c4442c328832839ad195ebfc60"
+  },
+  "repro/snapshots/expected/main/table_relative_wis_log.csv": {
+    "selection": "original numeric file",
+    "sha256": "b7f97ee5213df773d101eba0b09be6b2462c8246df0eef3729aceb653d87280f",
+    "source": "bench/runs/main/table_relative_wis_log.csv",
+    "source_sha256": "b7f97ee5213df773d101eba0b09be6b2462c8246df0eef3729aceb653d87280f"
+  },
+  "repro/snapshots/expected/main_frontier/table_context_experiment_all.csv": {
+    "selection": "all-stratum published effects only; no origin-level importation input or strata",
+    "sha256": "4b3cad1bfd72a72b4128438921a2df773df6629d2dae88385e9ca26d5e11f8da",
+    "source": "bench/runs/main_frontier/table_context_experiment.csv",
+    "source_sha256": "dbec32c4621eced35878bea517704e00ff495a5219f32fd96236e9aaa3cd73bc"
+  },
+  "repro/snapshots/expected/main_frontier/table_coverage.csv": {
+    "selection": "original numeric file",
+    "sha256": "2392f39108c69c86df813fe32a414d5e060b764d96ffd560b622148128ba14a6",
+    "source": "bench/runs/main_frontier/table_coverage.csv",
+    "source_sha256": "2392f39108c69c86df813fe32a414d5e060b764d96ffd560b622148128ba14a6"
+  },
+  "repro/snapshots/expected/main_frontier/table_llm_gain_by_phase.csv": {
+    "selection": "original numeric file",
+    "sha256": "85ea2f81d760b3163d828742789d85d462ea669d61ac2e87d31b2dd419f0afc1",
+    "source": "bench/runs/main_frontier/table_llm_gain_by_phase.csv",
+    "source_sha256": "85ea2f81d760b3163d828742789d85d462ea669d61ac2e87d31b2dd419f0afc1"
+  },
+  "repro/snapshots/expected/main_frontier/table_relative_wis.csv": {
+    "selection": "original numeric file",
+    "sha256": "bbfc26d1ce0522ff3f915d210075eb80de454b51f0ead3a5853edc0e19a7cb94",
+    "source": "bench/runs/main_frontier/table_relative_wis.csv",
+    "source_sha256": "bbfc26d1ce0522ff3f915d210075eb80de454b51f0ead3a5853edc0e19a7cb94"
+  },
+  "repro/snapshots/expected/main_frontier/table_relative_wis_log.csv": {
+    "selection": "original numeric file",
+    "sha256": "4e0e71c990717af598590438db3d08a8798c16646d4b9332b082e365c1427779",
+    "source": "bench/runs/main_frontier/table_relative_wis_log.csv",
+    "source_sha256": "4e0e71c990717af598590438db3d08a8798c16646d4b9332b082e365c1427779"
+  },
+  "repro/snapshots/expected/reason/table_coverage.csv": {
+    "selection": "original numeric file",
+    "sha256": "7d7152f54a2828ceb1afd7b70767ea11f23169e0eba60c315754ac20225da660",
+    "source": "bench/runs/reason/table_coverage.csv",
+    "source_sha256": "7d7152f54a2828ceb1afd7b70767ea11f23169e0eba60c315754ac20225da660"
+  },
+  "repro/snapshots/expected/reason/table_relative_wis.csv": {
+    "selection": "original numeric file",
+    "sha256": "a1712afefd29367e56336e7a82e57c1bd7f63b6a286140013b1216c48cbf979c",
+    "source": "bench/runs/reason/table_relative_wis.csv",
+    "source_sha256": "a1712afefd29367e56336e7a82e57c1bd7f63b6a286140013b1216c48cbf979c"
+  },
+  "repro/snapshots/expected/reason/table_relative_wis_log.csv": {
+    "selection": "original numeric file",
+    "sha256": "635fc4a5d26ddf429b8e2387b24b2b8b688b79bdfb1ddeea9127f57d20c970c5",
+    "source": "bench/runs/reason/table_relative_wis_log.csv",
+    "source_sha256": "635fc4a5d26ddf429b8e2387b24b2b8b688b79bdfb1ddeea9127f57d20c970c5"
+  },
+  "repro/snapshots/expected/reason_ext/table_coverage.csv": {
+    "selection": "original numeric file",
+    "sha256": "19302dcebede3464744f74919305ed9d1311d18557ccb90f0e6a6bd244ce0b0b",
+    "source": "bench/runs/reason_ext/table_coverage.csv",
+    "source_sha256": "19302dcebede3464744f74919305ed9d1311d18557ccb90f0e6a6bd244ce0b0b"
+  },
+  "repro/snapshots/expected/reason_ext/table_relative_wis.csv": {
+    "selection": "original numeric file",
+    "sha256": "e82840df632d545dbd2a00aa30e433e6833636d8ee22fbdf516eadc5192d9662",
+    "source": "bench/runs/reason_ext/table_relative_wis.csv",
+    "source_sha256": "e82840df632d545dbd2a00aa30e433e6833636d8ee22fbdf516eadc5192d9662"
+  },
+  "repro/snapshots/expected/reason_ext/table_relative_wis_log.csv": {
+    "selection": "original numeric file",
+    "sha256": "1201bd4c8a1c6f0c570e22a2f4cd6e824841645fcd39442615b1dc338eb379c0",
+    "source": "bench/runs/reason_ext/table_relative_wis_log.csv",
+    "source_sha256": "1201bd4c8a1c6f0c570e22a2f4cd6e824841645fcd39442615b1dc338eb379c0"
+  },
+  "repro/snapshots/runs/cf/mechanism_medians.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p50",
+    "sha256": "9e83f9bb90df73549615c7b450c3fb9d7567762b83aed4619a6adba0ee2b81cb",
+    "source": "bench/runs/cf/r0_multipliers.parquet",
+    "source_sha256": "64e7a1185c2e826a243e25f2582df0599cb3206b2281354c7f1a16158bff5153"
+  },
+  "repro/snapshots/runs/cf_reason/mechanism_medians.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p50",
+    "sha256": "e0c924325c42dea337771bf016b1c56addff1f3f9683faeaab05cc04cc5c3961",
+    "source": "bench/runs/cf_reason/r0_multipliers.parquet",
+    "source_sha256": "e67394c0b1e8e201ca26427a089b1706512bc04e6f22cf4cc39978bfdd3eb514"
+  },
+  "repro/snapshots/runs/frontier/forecasts.parquet": {
+    "selection": "original numeric file",
+    "sha256": "5ffabc4f304be52a8553f3c49af4aa25ee787367df6bfb5ddaf6a2e2a8a8e7d8",
+    "source": "bench/runs/frontier/forecasts.parquet",
+    "source_sha256": "5ffabc4f304be52a8553f3c49af4aa25ee787367df6bfb5ddaf6a2e2a8a8e7d8"
+  },
+  "repro/snapshots/runs/frontier/forecasts_context.parquet": {
+    "selection": "original numeric file",
+    "sha256": "de07216c3c9ffda205b9ccfa849060546f82d19bd4fdfdb15bd6dd45d1f71a48",
+    "source": "bench/runs/frontier/forecasts_context.parquet",
+    "source_sha256": "de07216c3c9ffda205b9ccfa849060546f82d19bd4fdfdb15bd6dd45d1f71a48"
+  },
+  "repro/snapshots/runs/frontier/internal/forecasts_multiplier_placebo.parquet": {
+    "selection": "original numeric file",
+    "sha256": "fe1b6209100035c837178cc3ba3a2a0a6f9b7c7e178624c5c87468ea95128e5a",
+    "source": "bench/runs/frontier/internal/forecasts_multiplier_placebo.parquet",
+    "source_sha256": "fe1b6209100035c837178cc3ba3a2a0a6f9b7c7e178624c5c87468ea95128e5a"
+  },
+  "repro/snapshots/runs/frontier/r0_multipliers.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p10, p50, p90",
+    "sha256": "bb90afc60ab9cc2c2a933e27156f31dec4e85fbd34eac326f33e957e9c0c5fe7",
+    "source": "bench/runs/frontier/r0_multipliers.parquet",
+    "source_sha256": "83de5938fb8459521e40e3035429a7fae6f101a05f4f1e72d3644b3246b2ec34"
+  },
+  "repro/snapshots/runs/frontier/table_phase_at_origin.csv": {
+    "selection": "original numeric file",
+    "sha256": "4bbfa35511406f96c8c070ab694475109ecaed002d3590f8daa999dd08fa289b",
+    "source": "bench/runs/frontier/table_phase_at_origin.csv",
+    "source_sha256": "4bbfa35511406f96c8c070ab694475109ecaed002d3590f8daa999dd08fa289b"
+  },
+  "repro/snapshots/runs/frontier_cf/mechanism_medians.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p50",
+    "sha256": "f30f723146f32a4f1896e768778742e711fd237b16bcf7f849cd57c3e4be82e7",
+    "source": "bench/runs/frontier_cf/r0_multipliers.parquet",
+    "source_sha256": "0ba9a5bae9bd7a129ee03df6e46cd657771fa9515164de191d12a9da707fd706"
+  },
+  "repro/snapshots/runs/frontier_hist/forecasts.parquet": {
+    "selection": "original numeric file",
+    "sha256": "8036bf368380e1a809bc82a1f5ac272238b49f02742847ee419bb5ad28711a5e",
+    "source": "bench/runs/frontier_hist/forecasts.parquet",
+    "source_sha256": "8036bf368380e1a809bc82a1f5ac272238b49f02742847ee419bb5ad28711a5e"
+  },
+  "repro/snapshots/runs/frontier_hist/internal/forecasts_multiplier_placebo.parquet": {
+    "selection": "original numeric file",
+    "sha256": "6f68e0026681cb40f3dad60965d3b77ee4c47160352c6cd6993b51a89fe0a239",
+    "source": "bench/runs/frontier_hist/internal/forecasts_multiplier_placebo.parquet",
+    "source_sha256": "6f68e0026681cb40f3dad60965d3b77ee4c47160352c6cd6993b51a89fe0a239"
+  },
+  "repro/snapshots/runs/frontier_hist/r0_multipliers.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p10, p50, p90",
+    "sha256": "e47a3577a36a140ee17ee2d5a50d6645bace7cdadad855e319bc892e928af39e",
+    "source": "bench/runs/frontier_hist/r0_multipliers.parquet",
+    "source_sha256": "f57d5de479332633e21d4b53087e0f4775ac8b40f7b5bc871554a72058d6e257"
+  },
+  "repro/snapshots/runs/frontier_hist/table_phase_at_origin.csv": {
+    "selection": "original numeric file",
+    "sha256": "47b84f7d4b2468e0a27bcbec691e55a74e76a9cf97465779ad649e69a25d5bbd",
+    "source": "bench/runs/frontier_hist/table_phase_at_origin.csv",
+    "source_sha256": "47b84f7d4b2468e0a27bcbec691e55a74e76a9cf97465779ad649e69a25d5bbd"
+  },
+  "repro/snapshots/runs/hist/forecasts.parquet": {
+    "selection": "original numeric file",
+    "sha256": "0902ac601531fae54c3362701994f270cd0d818b55d902a11966f3ce5d770f50",
+    "source": "bench/runs/hist/forecasts.parquet",
+    "source_sha256": "0902ac601531fae54c3362701994f270cd0d818b55d902a11966f3ce5d770f50"
+  },
+  "repro/snapshots/runs/hist/internal/forecasts_multiplier_placebo.parquet": {
+    "selection": "original numeric file",
+    "sha256": "783274fdd33d7f551d541ae03d1ee2a7fad0b38f1d3dd8c752e317b1545ce110",
+    "source": "bench/runs/hist/internal/forecasts_multiplier_placebo.parquet",
+    "source_sha256": "783274fdd33d7f551d541ae03d1ee2a7fad0b38f1d3dd8c752e317b1545ce110"
+  },
+  "repro/snapshots/runs/hist/r0_multipliers.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p10, p50, p90",
+    "sha256": "f6bb47f7d66793d4566e28dd1332524bee2e76791133bacc16f23b90336468a8",
+    "source": "bench/runs/hist/r0_multipliers.parquet",
+    "source_sha256": "da52a3834facf8d08da614a8eacf2f26c69b1e1b95b4e329fbd3188172383f28"
+  },
+  "repro/snapshots/runs/hist/sensitivity/forecasts_S2.parquet": {
+    "selection": "original numeric file",
+    "sha256": "526e9120dd23135b208e09907b89890951d02890ff5c6bda564913bc8854975a",
+    "source": "bench/runs/hist/sensitivity/forecasts_S2.parquet",
+    "source_sha256": "526e9120dd23135b208e09907b89890951d02890ff5c6bda564913bc8854975a"
+  },
+  "repro/snapshots/runs/hist/sensitivity/phase_changes_S2.csv": {
+    "selection": "original numeric file",
+    "sha256": "cdf6e645400c3ec05a6da4a98af052ca9e8f15fd4f691d172f6cef9c4bae60fd",
+    "source": "bench/runs/hist/sensitivity/phase_changes_S2.csv",
+    "source_sha256": "cdf6e645400c3ec05a6da4a98af052ca9e8f15fd4f691d172f6cef9c4bae60fd"
+  },
+  "repro/snapshots/runs/hist/table_phase_at_origin.csv": {
+    "selection": "original numeric file",
+    "sha256": "47b84f7d4b2468e0a27bcbec691e55a74e76a9cf97465779ad649e69a25d5bbd",
+    "source": "bench/runs/hist/table_phase_at_origin.csv",
+    "source_sha256": "47b84f7d4b2468e0a27bcbec691e55a74e76a9cf97465779ad649e69a25d5bbd"
+  },
+  "repro/snapshots/runs/main/forecasts.parquet": {
+    "selection": "original numeric file",
+    "sha256": "b87f7a70394b53764406488dd0e1d1011f87f47ecbd4936f088a3c060bd97e32",
+    "source": "bench/runs/main/forecasts.parquet",
+    "source_sha256": "b87f7a70394b53764406488dd0e1d1011f87f47ecbd4936f088a3c060bd97e32"
+  },
+  "repro/snapshots/runs/main/forecasts_context.parquet": {
+    "selection": "original numeric file",
+    "sha256": "14e349cd889118f11d36060abbe30900f9b3afd95dfc46604961fa288fda5bd1",
+    "source": "bench/runs/main/forecasts_context.parquet",
+    "source_sha256": "14e349cd889118f11d36060abbe30900f9b3afd95dfc46604961fa288fda5bd1"
+  },
+  "repro/snapshots/runs/main/internal/forecasts_multiplier_placebo.parquet": {
+    "selection": "original numeric file",
+    "sha256": "6e6ef41da78f8327f86ca73ca16ebabacdaa33722b263983edfc56fa826747b6",
+    "source": "bench/runs/main/internal/forecasts_multiplier_placebo.parquet",
+    "source_sha256": "6e6ef41da78f8327f86ca73ca16ebabacdaa33722b263983edfc56fa826747b6"
+  },
+  "repro/snapshots/runs/main/lastyear_r0_inputs.parquet": {
+    "selection": "Only current and last-year R0 numbers by origin, strain and week; no prompt text",
+    "sha256": "0ca45e8a9fcc655d21a8f9aae8feda6ea7a37f44615880dc65a1578815ca960a",
+    "source": "bench/runs/main/prompts/*/r0_semi.txt"
+  },
+  "repro/snapshots/runs/main/r0_multipliers.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p10, p50, p90",
+    "sha256": "f744501f77c5e96a0f2c9043ae8ddaae54da51cf299375de34cace22ca655f96",
+    "source": "bench/runs/main/r0_multipliers.parquet",
+    "source_sha256": "d6aa09d37282c83ec06e4595283d9fafd9e755802b9a5fae824c0d7077bd30ba"
+  },
+  "repro/snapshots/runs/main/sensitivity/forecasts_S2.parquet": {
+    "selection": "original numeric file",
+    "sha256": "f6c192a49a0c893ad9c7a6312806b9b49c57ee97dbf7a4da2bb8567859ceb6e8",
+    "source": "bench/runs/main/sensitivity/forecasts_S2.parquet",
+    "source_sha256": "f6c192a49a0c893ad9c7a6312806b9b49c57ee97dbf7a4da2bb8567859ceb6e8"
+  },
+  "repro/snapshots/runs/main/sensitivity/phase_changes_S2.csv": {
+    "selection": "original numeric file",
+    "sha256": "cdf6e645400c3ec05a6da4a98af052ca9e8f15fd4f691d172f6cef9c4bae60fd",
+    "source": "bench/runs/main/sensitivity/phase_changes_S2.csv",
+    "source_sha256": "cdf6e645400c3ec05a6da4a98af052ca9e8f15fd4f691d172f6cef9c4bae60fd"
+  },
+  "repro/snapshots/runs/main/table_phase_at_origin.csv": {
+    "selection": "original numeric file",
+    "sha256": "4bbfa35511406f96c8c070ab694475109ecaed002d3590f8daa999dd08fa289b",
+    "source": "bench/runs/main/table_phase_at_origin.csv",
+    "source_sha256": "4bbfa35511406f96c8c070ab694475109ecaed002d3590f8daa999dd08fa289b"
+  },
+  "repro/snapshots/runs/reason/forecasts.parquet": {
+    "selection": "original numeric file",
+    "sha256": "86cf0b7c5aff45f10a53c3a5771766760aa784d0073d4659d6444eb509fb0759",
+    "source": "bench/runs/reason/forecasts.parquet",
+    "source_sha256": "86cf0b7c5aff45f10a53c3a5771766760aa784d0073d4659d6444eb509fb0759"
+  },
+  "repro/snapshots/runs/reason/lastyear_r0_inputs.parquet": {
+    "selection": "Only current and last-year R0 numbers by origin, strain and week; no prompt text",
+    "sha256": "3eec60cc7c7f19aa490ae45529bfcee09d6af407b3dc4e013974933f49d73eb1",
+    "source": "bench/runs/reason/prompts/*/r0_semi.txt"
+  },
+  "repro/snapshots/runs/reason/r0_multipliers.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p10, p50, p90",
+    "sha256": "3f2a148f4248dba6c481568cc9e7a2ad0a52187a5161c4c6d1bcc30a8ee60ee4",
+    "source": "bench/runs/reason/r0_multipliers.parquet",
+    "source_sha256": "163c70583d7c1d9cf968195caedeaaf13ada88f589f0788e320f0f47ddf00d5d"
+  },
+  "repro/snapshots/runs/reason/table_phase_at_origin.csv": {
+    "selection": "original numeric file",
+    "sha256": "a748d19045ca4965db202a6c8a8fd998fbf65ce49199ad8c14d4a7cc59b94fe3",
+    "source": "bench/runs/reason/table_phase_at_origin.csv",
+    "source_sha256": "a748d19045ca4965db202a6c8a8fd998fbf65ce49199ad8c14d4a7cc59b94fe3"
+  },
+  "repro/snapshots/runs/reason_ext/forecasts.parquet": {
+    "selection": "original numeric file",
+    "sha256": "08db3e061296d4cce0713891ba79006762e9e6a73eb9b691b4ea23312e09f1a2",
+    "source": "bench/runs/reason_ext/forecasts.parquet",
+    "source_sha256": "08db3e061296d4cce0713891ba79006762e9e6a73eb9b691b4ea23312e09f1a2"
+  },
+  "repro/snapshots/runs/reason_ext/r0_multipliers.parquet": {
+    "selection": "allowlisted columns: origin, model, arm, sample, strain, week, p10, p50, p90",
+    "sha256": "4882472efb7686e9adc0cbbb65e1a99ca8fbd15666c3472ceadd3e7e5f66589f",
+    "source": "bench/runs/reason_ext/r0_multipliers.parquet",
+    "source_sha256": "8786210af37dde2c0f730c1a73d540e1864d5979d44ea56579ec662c04a242f6"
+  },
+  "repro/snapshots/runs/reason_ext/table_phase_at_origin.csv": {
+    "selection": "original numeric file",
+    "sha256": "a748d19045ca4965db202a6c8a8fd998fbf65ce49199ad8c14d4a7cc59b94fe3",
+    "source": "bench/runs/reason_ext/table_phase_at_origin.csv",
+    "source_sha256": "a748d19045ca4965db202a6c8a8fd998fbf65ce49199ad8c14d4a7cc59b94fe3"
+  }
+}

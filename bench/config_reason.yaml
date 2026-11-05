@@ -1,0 +1,27 @@
+# ============================================================================
+# 修正案 10（A10-2）：推理模式的免费测试（探索性，bench/protocol_context_experiment.md）
+# 同样的模型版本、同样的提示词（与主研究逐字相同），只改请求参数：
+#   GPT-OSS 20B 推理强度 low -> high；Kimi K3 thinking off -> on；输出上限提到 16000 token
+# 设计 (iii) 和 (i)，主研究 24 个起点，每个请求 1 次；结果只在 runs/reason/，不进入主研究的任何估计和图表
+#   bash llm.sh run --config config_reason.yaml
+# ============================================================================
+extends: config.yaml
+run_name: reason
+arms: [r0_semi, direct_blind]
+context_experiment: null
+n_samples: 1
+models:
+  - id: gptoss20r
+    label: GPT-OSS 20B (reasoning high)
+    provider: nvidia
+    model: openai/gpt-oss-20b
+    params: {max_tokens: 32000, reasoning_effort: high}   # 修正案 10 更新：16000 时 10/30 个回答在思考阶段被截断
+    rpm: 20
+    concurrency: 6
+  - id: kimik3r
+    label: Kimi K3 (thinking on)
+    provider: nvidia
+    model: moonshotai/kimi-k3
+    params: {max_tokens: 16000, extra_body: {chat_template_kwargs: {thinking: true}}}
+    rpm: 15
+    concurrency: 4
