@@ -1,5 +1,5 @@
 # ============================================================================
-# 新版（分块）模型与原模型（_backup/2026-09-24/ai_epi.stan）是否是同一个模型
+# Compare the split model with the archived pre-split Stan fixture.
 #   1. 随机参数点上 log 后验只差一个常数（原模型多一个不进似然的 detection_rate[6]）
 #   2. 共享参数的梯度完全相同
 #   3. 各块 log 后验之和 = 整体模型（只差常数）
@@ -10,6 +10,9 @@ source(file.path(Sys.getenv("AI_EPI_ROOT", "."), "ai_epi_core.R"))
 set.seed(42)
 old_model <- stan_model(file.path(proj_dir, "tests/fixtures/ai_epi_pre_split.stan"))
 
+# The archived model clamps R0. Match that option for the equivalence
+# test while leaving the study's smooth-bound configuration in ai_epi_core.R.
+smooth_bounds <- 0L
 sd  <- make_stan_data(val_end, 0, common_window = TRUE)              # 分块等价性要在同一时间窗上比
 nb  <- sd$blocks[[1]]$num_basis
 full <- block_data(sd$fit_df, strain_names, sd$blocks[[1]]$num_knots, 0)  # 一个块包含全部病原体

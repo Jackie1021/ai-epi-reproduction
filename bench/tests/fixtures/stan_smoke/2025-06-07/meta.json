@@ -1,0 +1,129 @@
+{
+  "origin": "2025-06-07",
+  "fit_start": "2023-12-09",
+  "fit_end": "2025-06-07",
+  "T_weeks": 79,
+  "strain_start": {
+    "B": "2023-12-23",
+    "H3": "2023-12-16",
+    "H1": "2024-02-03",
+    "COVID": "2023-12-09",
+    "RSV": "2024-02-03",
+    "HFMD": "2024-03-09"
+  },
+  "blocks": {
+    "B+H3+H1": {
+      "strains": ["B", "H3", "H1"],
+      "start": "2023-12-16",
+      "weeks": 78,
+      "num_knots": 16
+    },
+    "COVID": {
+      "strains": "COVID",
+      "start": "2023-12-09",
+      "weeks": 79,
+      "num_knots": 16
+    },
+    "RSV": {
+      "strains": "RSV",
+      "start": "2024-02-03",
+      "weeks": 71,
+      "num_knots": 15
+    },
+    "HFMD": {
+      "strains": "HFMD",
+      "start": "2024-03-09",
+      "weeks": 66,
+      "num_knots": 14
+    }
+  },
+  "strain_names": ["B", "H3", "H1", "COVID", "RSV", "HFMD"],
+  "fitted_strains": ["B", "H3", "H1", "COVID", "RSV", "HFMD"],
+  "study": "main",
+  "window": {},
+  "state_order": ["S", "E", "I", "R"],
+  "forecast_weeks": 4,
+  "fc_mode_labels": ["constant R0", "last-year R0", "scaled last-year R0"],
+  "fc_quantile_levels": [0.01, 0.025, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.975, 0.99],
+  "population": 7524000,
+  "child_ratio": 0.029,
+  "constants": {
+    "sigma_E": [0.333333333333333, 0.333333333333333, 0.333333333333333, 0.333333333333333, 0.25, 0.222222222222222],
+    "gamma_I": [0.2, 0.2, 0.2, 0.285714285714286, 0.142857142857143, 0.142857142857143],
+    "R0_min": 0.5,
+    "R0_max": 4
+  },
+  "model": {
+    "onset_anchor": "2024-01-06",
+    "blocks": ["B+H3+H1", "COVID", "RSV", "HFMD"],
+    "rw_order": 1,
+    "smooth_bounds": 1,
+    "knot_spacing_weeks": 5,
+    "init_n_starts": 1
+  },
+  "n_draws_total": 40,
+  "n_draws_exported": 40,
+  "sampling": {
+    "iter": 40,
+    "warmup": 20,
+    "chains": 2,
+    "adapt_delta": 0.8,
+    "max_treedepth": 6,
+    "metric": "dense_e"
+  },
+  "smoke": true,
+  "runtime_min": 0.331854097048442,
+  "diagnostics": {
+    "max_rhat": 30.085,
+    "min_n_eff": 1,
+    "n_divergent": 0,
+    "n_max_treedepth": 160,
+    "blocks": [
+      {
+        "block": "B+H3+H1",
+        "minutes": 0.2,
+        "divergent": 0,
+        "treedepth_hits": 40,
+        "mean_leapfrog": 63,
+        "max_rhat": 30.085,
+        "min_n_eff": 1
+      },
+      {
+        "block": "COVID",
+        "minutes": 0.1,
+        "divergent": 0,
+        "treedepth_hits": 40,
+        "mean_leapfrog": 63,
+        "max_rhat": 7.111,
+        "min_n_eff": 1
+      },
+      {
+        "block": "RSV",
+        "minutes": 0,
+        "divergent": 0,
+        "treedepth_hits": 40,
+        "mean_leapfrog": 63,
+        "max_rhat": 1.918,
+        "min_n_eff": 1
+      },
+      {
+        "block": "HFMD",
+        "minutes": 0,
+        "divergent": 0,
+        "treedepth_hits": 40,
+        "mean_leapfrog": 63,
+        "max_rhat": 2.243,
+        "min_n_eff": 2
+      }
+    ]
+  },
+  "files": {
+    "stan_md5": "43681834d9d525a74c06b00d4c4c867b",
+    "data_md5": "9a0061a2f79a673602fafb8d34e345e8"
+  },
+  "versions": {
+    "R": "R version 4.5.3 (2026-03-11)",
+    "rstan": "2.32.7"
+  },
+  "created_at": "2026-11-06T01:07:25+0800"
+}

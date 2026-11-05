@@ -1,10 +1,11 @@
 import re
+from pathlib import Path
 
 import pandas as pd
 import pytest
 
 from llm_bench.config import load_config
-from llm_bench.data import list_bundles, load_calendar, load_oag_monthly, load_observed
+from llm_bench.data import OriginBundle, list_bundles, load_calendar, load_oag_monthly, load_observed
 from llm_bench.prompts import build_prompt
 
 
@@ -12,9 +13,8 @@ from llm_bench.prompts import build_prompt
 def ctx():
     cfg = load_config()
     bundles = list_bundles(cfg, smoke=False) or list_bundles(cfg, smoke=True)
-    if not bundles:
-        pytest.skip("no Stan export yet")
-    return cfg, load_observed(cfg), bundles[0], load_oag_monthly(cfg), load_calendar(cfg)
+    bundle = bundles[0] if bundles else OriginBundle(Path(__file__).parent / "fixtures/stan_smoke/2025-06-07")
+    return cfg, load_observed(cfg), bundle, load_oag_monthly(cfg), load_calendar(cfg)
 
 
 def test_blind_prompt_leaks_nothing(ctx):

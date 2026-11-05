@@ -1,9 +1,9 @@
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
-import pytest
-
 from llm_bench.config import load_config
-from llm_bench.data import list_bundles
+from llm_bench.data import OriginBundle, list_bundles
 from llm_bench.simulator import MechanisticForecaster, sample_multiplier_paths, simulate_weeks
 
 
@@ -46,9 +46,7 @@ def test_multiplier_paths_hit_requested_quantiles():
 def test_matches_stan_on_exported_bundle():
     cfg = load_config()
     bundles = list_bundles(cfg, smoke=False) or list_bundles(cfg, smoke=True)
-    if not bundles:
-        pytest.skip("no Stan export yet")
-    b = bundles[0]
+    b = bundles[0] if bundles else OriginBundle(Path(__file__).parent / "fixtures/stan_smoke/2025-06-07")
     f = MechanisticForecaster(b, cfg.strains)
     mu = f.expected_cases(np.ones((f.n_draws, len(cfg.strains), cfg.horizons)))
     st = b.stan_mu_fc[b.stan_mu_fc["fc_mode"] == 1].pivot_table(
