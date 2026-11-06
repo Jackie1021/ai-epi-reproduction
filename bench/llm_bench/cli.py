@@ -46,7 +46,20 @@ def _models(cfg, args):
 
 def _arms(cfg, args):
     from .runner import all_arms
-    return args.arms.split(",") if args.arms else all_arms(cfg)
+
+    configured = all_arms(cfg)
+    if args.arms is None:
+        return configured
+    selected = list(dict.fromkeys(arm.strip() for arm in args.arms.split(",") if arm.strip()))
+    if not selected:
+        raise SystemExit("--arms must name at least one configured experiment arm")
+    missing = [arm for arm in selected if arm not in configured]
+    if missing:
+        raise SystemExit(
+            f"Experiment arms not enabled in the configuration: {', '.join(missing)}. "
+            "Add them to arms or context_experiment.arms in the YAML before selecting them."
+        )
+    return selected
 
 
 def cmd_doctor(cfg, args):

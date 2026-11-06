@@ -308,6 +308,11 @@ class Runner:
             for arm, p in prompts.items():
                 for m in self.models:
                     tasks += [Task(b, arm, m, s, p) for s in range(self.samples_for(arm, m.id))]
+        if not tasks:
+            raise SystemExit(
+                "No calls planned. Check the selected origins, arms, sample counts, "
+                "and model eligibility in context_experiment.models."
+            )
         order = self.cfg.get("request_order")
         if order:                        # 历史期（修正案 8）：按设计的优先顺序，设计内按固定随机顺序的起点
             rank = {a: i for i, a in enumerate(order["arms"])}

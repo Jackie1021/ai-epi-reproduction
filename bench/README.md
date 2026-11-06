@@ -57,3 +57,19 @@ and plotting. `forecasts`, `score` and `plot` run the stages individually.
 Live results are written to `bench/runs/<run>/`, and provider responses are
 cached locally. The final manuscript evaluation can instead be recalculated
 from the saved numerical forecasts using [the offline replay](../repro/README.md).
+
+## Add a reviewer experiment
+
+Use a separate config that extends the original configuration and give it a
+new run name. Define the intended `arms` and `models` in the YAML. Lists
+replace inherited lists, and `--arms` selects a subset of the configured
+arms. Set `context_experiment: null` if the reviewer run should skip the
+inherited external-information experiment. Use `--dry-run` to check the
+request plan before issuing model calls.
+
+A new run name separates results. Identical requests still reuse the local
+response cache, so use a separate checkout for independent API draws. A new
+forecast design needs corresponding prompt and parsing code. New forecast
+weeks require Stan exports and baselines covering those weeks before
+comparing relative WIS. The original frozen benchmarks remain the reference
+for reproducing the paper.
